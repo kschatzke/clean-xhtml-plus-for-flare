@@ -1,8 +1,8 @@
 # Clean XHTML Plus for Flare
 
 This project contains a Python script, JavaScript, and CSS that allow you to use the following HTML5 features in Clean XHTML outputs:
-Togglers
 
+* Togglers
 * Drop-down text
 * Expanding text
 * Text popups
