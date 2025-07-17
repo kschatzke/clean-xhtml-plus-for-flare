@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This is a <a data-cxp-topic-popup-link="popup-id" href="#">topic popup link</a>.</p>
+        <dialog data-cxp-topic-popup="popup-id">
+            <div>
+                <p>This is content that appears when a user clicks the topic popup link.</p>
+            </div>
+        </dialog>
+    </body>
+</html>

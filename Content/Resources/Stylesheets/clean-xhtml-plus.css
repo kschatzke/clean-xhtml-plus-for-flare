@@ -1,0 +1,186 @@
+﻿/*<meta conditions="clean-xhtml-plus.clean-xhtml-plus" />*/
+
+/* Text popup styles */
+
+a.cxp-text-popup
+{
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: #0000ff;
+	mc-conditions: 'clean-xhtml-plus.clean-xhtml-plus';
+	mc-exclude-action: unbind;
+}
+
+span.cxp-text-popup-content
+{
+	visibility: hidden;
+	width: 200px;
+	background-color: #dcdcdc;
+	color: #000000;
+	padding: 5px;
+	border-radius: 4px;
+	position: absolute;
+	z-index: 1;
+	top: 135%;
+	left: 50%;
+	margin-left: -100px;
+	opacity: 0;
+	transition: opacity 0.3s;
+	box-shadow: 0px 2px 8px 0px rgba(0,0,0,.4);
+}
+
+span.cxp-text-popup-content::after
+{
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #dcdcdc transparent;
+}
+
+a.cxp-text-popup:hover span.cxp-text-popup-content
+{
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Topic popup styles */
+
+a.cxp-topic-popup
+{
+	mc-conditions: 'clean-xhtml-plus.clean-xhtml-plus';
+	mc-exclude-action: unbind;
+}
+
+dialog
+{
+	mc-conditions: 'clean-xhtml-plus.clean-xhtml-plus';
+}
+
+@media flare
+{
+	/* Topic popup styles */
+
+	dialog
+	{
+		display: block;
+	}
+}
+
+@media online
+{
+	/* Drop-down text styles */
+
+	div[class^='MCDropDownHead']
+	{
+		color: #006600 !important;
+		font-style: italic !important;
+		cursor: pointer !important;
+		font-size: 16px !important;
+		margin: 0 !important;
+		padding: 0 0 0 14px !important;
+		font-weight: normal !important;
+		background-image: url('../Images/clean-xhtml-plus/DropDownClosed.gif');
+		background-repeat: no-repeat;
+	}
+
+	.cxp-drop-down-head-open
+	{
+		background-image: url('../Images/clean-xhtml-plus/DropDownOpen.gif') !important;
+	}
+
+	div.MCDropDownBody
+	{
+		display: none;
+	}
+
+	/* Expanding head styles */
+
+	span[class^='MCExpandingHead']
+	{
+		background-image: url('../Images/clean-xhtml-plus/ExpandingClosed.gif');
+		background-repeat: no-repeat;
+		background-position: right center;
+		padding: 0 16px 0 0;
+		cursor: pointer;
+	}
+
+	.cxp-expanding-head-open
+	{
+		background-image: url('../Images/clean-xhtml-plus/ExpandingOpen.gif') !important;
+	}
+
+	span[class^='MCExpandingBody']
+	{
+		display: none;
+	}
+
+	/* Toggler styles */
+
+	[data-cxp-toggler]
+	{
+		display: none;
+	}
+
+	a[data-cxp-toggler-link]
+	{
+		text-decoration: none !important;
+		color: navy !important;
+		background-image: url('../Images/clean-xhtml-plus/DropDownClosed.gif');
+		background-repeat: no-repeat;
+		padding: 0 0 0 14px !important;
+		font-size: 16px !important;
+	}
+
+	.cxp-toggler-link-open
+	{
+		background-image: url('../Images/clean-xhtml-plus/DropDownOpen.gif') !important;
+	}
+
+	/* Topic popup styles */
+
+	dialog
+	{
+		border: solid 1px #ffffff;
+		border-radius: 5px;
+		box-shadow: 0 4px 10px #333333;
+		margin: 100px;
+		width: calc(100% - 200px);
+		height: calc(100% - 200px);
+	}
+
+	dialog:before
+	{
+		content: "×";
+		cursor: pointer;
+		font-size: 22px;
+		position: absolute;
+		top: 0;
+		right: 6px;
+	}
+
+	dialog > *
+	{
+		min-width: 100%;
+		min-height: calc(100% - 24px);
+		margin-top: 24px;
+		border: none;
+	}
+
+	dialog::backdrop
+	{
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+@media print
+{
+	span.cxp-text-popup-content
+	{
+		display: none;
+	}
+}

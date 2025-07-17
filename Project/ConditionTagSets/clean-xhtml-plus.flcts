@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet
+  conditions="clean-xhtml-plus.clean-xhtml-plus">
+  <ConditionTag
+    BackgroundColor="#ff7f50"
+    Name="clean-xhtml-plus"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#00ffff"
+    Name="python"
+    Comment="" />
+</CatapultConditionTagSet>

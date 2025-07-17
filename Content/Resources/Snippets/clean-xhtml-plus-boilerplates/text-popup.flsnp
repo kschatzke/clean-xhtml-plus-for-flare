@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This is a <a class="cxp-text-popup" href="#">text popup<span class="cxp-text-popup-content">This is text that appears when you hover over the popup.</span></a>.</p>
+    </body>
+</html>

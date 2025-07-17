@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap Clean XHTML Target"
+  Type="CleanXHTML"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  ResolveCssVariables="true"
+  ConditionTagExpression=""
+  Medium="online"
+  ContentInclusionType="Referenced">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true"
+    OutputFormat="doc" />
+  <PreBuild></PreBuild>
+</CatapultTarget>

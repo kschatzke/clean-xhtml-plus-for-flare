@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Read Me: Clean XHTML&#160;Plus for Flare</h1>
+        <p MadCap:conditions="read-me.internal">Build the read-me.fltar file to view these instructions in a readable format.</p>
+        <h2><a name="About"></a>About This Project</h2>
+        <p>This project contains a Python script, JavaScript, and CSS that allow you to use the following HTML5 features in Clean&#160;XHTML outputs:</p>
+        <ul>
+            <li>
+                <p>Togglers</p>
+            </li>
+            <li>
+                <p>Drop-down text</p>
+            </li>
+            <li>
+                <p>Expanding text</p>
+            </li>
+            <li>
+                <p>Text popups</p>
+            </li>
+            <li>
+                <p>Topic popups</p>
+            </li>
+        </ul>
+        <p>In addition to allowing you to use these features in Clean XHTML outputs, Clean XHTML Plus also allows you to:</p>
+        <ul>
+            <li>
+                <p>Insert character-level formatting in text popups.</p>
+            </li>
+            <li>
+                <p>Insert the content of topic popups directly in the topics in which you are inserting the topic popup links (rather than having to create separate popup topics).</p>
+            </li>
+            <li>
+                <p>Use topic popups in HTM5 outputs with side or top navigation skins. (The native topic popup feature in Flare is diabled for these types of outputs.)</p>
+            </li>
+        </ul>
+        <h2>Set up Clean XHTML&#160;Plus in Your Flare Projects</h2>
+        <p>To set up Clean XHTML Plus in your Flare projects, complete these four steps:</p>
+        <ol>
+            <li>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Install Python on your computer (if it's not already installed).</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Go to <a href="https://www.python.org/downloads">python.org/downloads</a>.</p>
+                            </li>
+                            <li>
+                                <p>Click <strong>Download Python X.X.X</strong>, where X.X.X is the latest version of Python for Windows.</p>
+                            </li>
+                            <li>
+                                <p>Browse to and double-click the file your browser downloaded.</p>
+                            </li>
+                            <li>
+                                <p>Follow the on-screen instructions.</p>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Install the Beautiful Soup and LXML modules.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Open the Windows command prompt. (In Windows 11, select <strong>Start &gt; All &gt;&#160;Terminal</strong>.)</p>
+                            </li>
+                            <li>
+                                <p>Type the following command at the prompt and press ENTER:</p>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetBody MadCap:continue="False" MadCap:lineNumberStart="1" MadCap:useLineNumbers="False" xml:space="preserve">pip install beautifulsoup4 lxml</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Import the Clean XHTML Plus components from this project into your Flare projects.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Open your project in Flare.</p>
+                            </li>
+                            <li>
+                                <p>In the Project Organizer panel, browse to <code>Project\Imports</code>.</p>
+                            </li>
+                            <li>
+                                <p>Right click the <code>Imports</code> folder, and select <strong>Add Flare Project Import File</strong>.</p>
+                            </li>
+                            <li>
+                                <p>In the <strong>File Name</strong> box, type an appropriate name for the import file.</p>
+                            </li>
+                            <li>
+                                <p>Click <strong>Add</strong>.</p>
+                            </li>
+                            <li>
+                                <p>Set up the import file:</p>
+                                <table style="width: 100%;">
+                                    <col style="width: 25%;" />
+                                    <col style="width: 75%;" />
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <p>Control</p>
+                                            </th>
+                                            <th>
+                                                <p>Procedure</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>Source Project</p>
+                                            </td>
+                                            <td>
+                                                <p>Click <strong>Browse</strong>, browse to and select the <code>clean-xhtml-plus.flprj</code> file, and click <strong>Open</strong>.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Include files</p>
+                                            </td>
+                                            <td>
+                                                <p>Select <strong>All Files (*.*)</strong>.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Import Conditions</p>
+                                            </td>
+                                            <td>
+                                                <p>Click <strong>Edit</strong>, select the <strong>clean-xhtml-plus.clean-xhtml-plus</strong> row, select the <strong>Include</strong> option button, click <strong>OK</strong>, and select <strong>Auto-Exclude Non-Tagged Files</strong>.</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <p>Save the changes and click <strong>Import</strong>.</p>
+                            </li>
+                            <li>
+                                <p>Open all HTML targets in your Flare project and exclude the clean-xhtml-plus.python condition so that the Python scripts aren't included in those targets' outputs.</p>
+                            </li>
+                            <li>
+                                <p>Open all print (PDF&#160;or Word) targets in your Flare project and exclude the clean-xhtml-plus.clean-xhtml-plus condition so that Clean XHTML Plus features don't appear in print outputs.</p>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+        </ol>
+        <h2>Set up the style sheet</h2>
+        <p>To set up the Clean XHTML&#160;Plus style sheet in your Flare project:</p>
+        <ol>
+            <li>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Insert a link to the Clean XHTML Plus style sheet in your main style sheet.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>In the Content Explorer panel, browse to and open your main style sheet.</p>
+                            </li>
+                            <li>
+                                <p>Select <strong>Options &gt; Stylesheet Links</strong>.</p>
+                            </li>
+                            <li>
+                                <p>Double-click the <code>clean-xhtml-plus.css</code> style sheet row in the <strong>Stylesheets</strong> list on the left so that the row appears in the <strong>Current Links</strong> list on the right and click <strong>OK</strong>.</p>
+                            </li>
+                            <li>
+                                <p>Save the file.</p>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Set the style sheet medium for all Clean XHTML target files in your project to online.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>In the Project Organizer panel, browse to and open the first Clean XHTML&#160;target in your Flare project.</p>
+                            </li>
+                            <li>
+                                <p>Click <strong>Advanced</strong>.</p>
+                            </li>
+                            <li>
+                                <p>Scroll to the <strong>Medium</strong> drop-down, and set it to <strong>online</strong>.</p>
+                            </li>
+                            <li>
+                                <p>Save the file.</p>
+                            </li>
+                            <li>
+                                <p>Repeat steps a to d for all other Clean XHTML&#160;targets in your Flare project.</p>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+            <li>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Set the style sheet medium in the XML&#160;Editor to flare.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Open any topic in your Flare project in the XML Editor.</p>
+                            </li>
+                            <li>
+                                <p>Click <strong>Medium (default)</strong> and select <strong>flare</strong>.</p>
+                            </li>
+                        </ol>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </li>
+        </ol>
+        <h2>Link to the JavaScript</h2>
+        <p>Insert a link to the <code>Content\Resources\Scripts\clean-xhtml-plus.js</code> JavaScript in your projects template pages (see <a href="https://help.madcapsoftware.com/flare2025/Content/Flare/Step3-Design/Template-Pages/Template-Pages.htm">Template Pages</a> and <a href="https://help.madcapsoftware.com/flare2025/Content/Flare/Step2-Authoring/Scripts/Inserting-Scripts-Topics.htm">Inserting Scripts</a>).</p>
+        <p><strong>Important:</strong> The link to the script needs to be last element in the body of the template page.</p>
+        <h2>Insert Clean XHTML&#160;Plus elements in your project</h2>
+        <p>You can insert drop-down text and expanding text using the existing controls in Flare (see <a href="https://help.madcapsoftware.com/flare2025/Content/Flare/Step2-Authoring/Links/Drop-Downs/Inserting-Drop-Downs.htm" target="_blank">Inserting Drop-Downs</a> and <a href="https://help.madcapsoftware.com/flare2025/Content/Flare/Step2-Authoring/Links/Expanding-Text/Inserting-Expanding-Text.htm">Inserting Expanding Text</a>). When you build Clean XHTML output, Flare retains the markup for these features in the clean XHTML code. Clean XHTML Plus adds CSS and JavaScript to your Clean XHTML&#160;outputs that leverages this markup to recreate the features.</p>
+        <p>For togglers, text popups, and topic popups, you need to insert new content with special markup. You can use the boilerplate snippets in Content\Resoruces\Snippets\clean-xhtml-plus-boilerplates as a starting point. Drag and drop these snippets into your topics and then convert them to plain text to customize their contents.</p>
+        <p>For togglers and topic popups, you need to create a unique ID for the hidden content and point to that ID in the feature's link text. You do this by changing the value of the custom data attributes for these elements. To see these attributes, <a href="https://help.madcapsoftware.com/flare2025/Content/Flare/Interface-Files/Window-Panes/Attributes-Window-Pane.htm">open the Attributes window pane</a>.</p>
+        <p>Note:&#160;You can show more than one when a user clicks a toggler link. To do this, assign a unique ID to each element and then refer to these element's IDs in the toggler link's data attribute, separating them with semicolons (;).</p>
+        <h2>Convert existing HTML5 features to Clean XHTML&#160;Plus features</h2>
+        <p>If you have existing togglers, text popups, and topic popups in your project that you want to convert to Clean XHTML&#160;Plus features, you can run the <code>html5-to-clean-xhtml.py</code> Python script.</p>
+        <p>You can run the script from the Windows Command Prompt outside of Flare or from the Pre-Build Event Command in any outputs' target file. The first option is best if you only want to run the script once (or at most a few times during the development cycle). The second option is best if you want to run the script every time you build an output.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Run the <code>html5-to-clean-xhtml.py</code> script from the Windows Command Prompt</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>
+                        <p>In the Content Explorer panel, browse to <code>Content\Resources\Python</code>.</p>
+                    </li>
+                    <li>
+                        <p>Right-click the <code>Python</code> folder and select <strong>Open Folder in&#160;Windows</strong>.</p>
+                    </li>
+                    <li>
+                        <p>In the File&#160;Explorer window that appears, hold down the SHIFT&#160;key, right-click in an empty space, and select <strong>Open in Terminal</strong>, <strong>Open in command window here</strong>, or <strong>Open PowerShell window here</strong>.</p>
+                    </li>
+                    <li>
+                        <p>In the command prompt window that appears, type the following command:</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetBody MadCap:continue="False" MadCap:lineNumberStart="1" MadCap:useLineNumbers="False" xml:space="preserve">python html5-to-clean-xhtml.py</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </li>
+                    <li>
+                        <p>Press ENTER.</p>
+                        <p>The Python script runs.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Run the <code>html5-to-clean-xhtml.py</code> script from the Pre-Build Event Command</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>
+                        <p>In the Project Organizer panel, browse to and open the target file for which you want to run the script.</p>
+                    </li>
+                    <li>
+                        <p>Click <strong>Build Events</strong>.</p>
+                    </li>
+                    <li>
+                        <p>In the <strong>Pre-Build Event Command</strong> box, type the following commands:</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetBody MadCap:continue="False" MadCap:lineNumberStart="1" MadCap:useLineNumbers="False" xml:space="preserve">cd $(ProjectDirectory)\Content\Resources\Python
+python html5-to-clean-xhtml.py</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </li>
+                    <li>
+                        <p>Save the file.</p>
+                    </li>
+                    <li>
+                        <p>Click <strong>Build</strong>.</p>
+                        <p>Flare runs the Python script and the builds the output.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Questions or Comments</h2>
+        <p>You can connect with me through <a href="https://www.linkedin.com/in/kenschatzke">LinkedIn</a>.</p>
+        <script src="Resources/Scripts/clean-xhtml-plus.js">
+        </script>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This is a <a data-cxp-toggler-link="toggler-id" href="#">toggler link</a>.</p>
+        <p data-cxp-toggler="toggler-id">This is text that appears and disappears when the user clicks the toggler link.</p>
+    </body>
+</html>
